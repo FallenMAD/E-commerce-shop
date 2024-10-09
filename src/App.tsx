@@ -31,7 +31,11 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],
+{
+  basename: import.meta.env.BASE_URL,
+}
+);
 
 function App() {
   const dispatch = useAppDispatch();
