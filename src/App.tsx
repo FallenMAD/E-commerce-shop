@@ -1,51 +1,48 @@
 import { useEffect } from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-import { useAppDispatch, useAppSelector } from './app/hooks';
+import { useAppDispatch } from './app/hooks';
 import {
   getProducts,
-  selectStatus,
 } from './features/ProductsSlice/productsSlice';
 import { Cart, Home, NotFound, Products, Root } from './pages';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: '*',
-        element: <NotFound />,
-      },
-      {
-        path: 'products',
-        element: <Products />,
-      },
-      {
-        path: 'cart',
-        element: <Cart />,
-      },
-    ],
-  },
-],
-{
-  basename: import.meta.env.BASE_URL,
-}
+const router = createHashRouter(
+  [
+    {
+      path: '/',
+      element: <Root />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: '*',
+          element: <NotFound />,
+        },
+        {
+          path: 'products',
+          element: <Products />,
+        },
+        {
+          path: 'cart',
+          element: <Cart />,
+        },
+      ],
+    },
+  ],
+  // {
+  //   basename: '/E-commerce-shop',
+  // },
 );
 
 function App() {
   const dispatch = useAppDispatch();
-  const status = useAppSelector(selectStatus);
 
   useEffect(() => {
-    if (status === 'idle') {
-      dispatch(getProducts('all'));
-    }
-  }, [status, dispatch]);
+    dispatch(getProducts('all'));
+  }, [dispatch]);
 
   return (
     <div className="app">
