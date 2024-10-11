@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useAppSelector } from '../../app/index';
 import { routes } from '../../constants';
 import { selectQuantity } from '../../features/CartSlice';
+import { ERoutes } from '../../types';
 
 export const Header = () => {
   const quantity = useAppSelector(selectQuantity);
@@ -16,7 +17,7 @@ export const Header = () => {
               to={to}
             >
               {label}
-              {to === '/cart' && quantity > 0 && (
+              {to === ERoutes.CART && quantity > 0 && (
                 <span className="nav__quantity">({quantity})</span>
               )}
             </NavLink>

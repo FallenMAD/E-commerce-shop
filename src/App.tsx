@@ -32,9 +32,6 @@ const router = createHashRouter(
       ],
     },
   ],
-  // {
-  //   basename: '/E-commerce-shop',
-  // },
 );
 
 function App() {

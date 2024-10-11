@@ -1,5 +1,7 @@
-export const routes = [
-  { to: '/', label: 'Home' },
-  { to: '/products', label: 'Products' },
-  { to: '/cart', label: 'Cart' },
-] as const;
+import { ERoutes, TRoutes } from "../types";
+
+export const routes: TRoutes[] = [
+  { to: ERoutes.HOME, label: 'Home' },
+  { to: ERoutes.PRODUCTS, label: 'Products' },
+  { to: ERoutes.CART, label: 'Cart' },
+];

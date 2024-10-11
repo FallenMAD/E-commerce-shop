@@ -1,14 +1,16 @@
-export const sortValues = [
+import { ESortValues, TSortValues } from '../types';
+
+export const sortValues: TSortValues[] = [
   {
-    value: 'all',
+    value: ESortValues.ALL,
     label: 'All',
   },
   {
-    value: 'highest',
+    value: ESortValues.HIGHEST,
     label: 'From highest to lowest',
   },
   {
-    value: 'lowest',
+    value: ESortValues.LOWEST,
     label: 'From lowest to highest',
   },
-] as const;
+];
