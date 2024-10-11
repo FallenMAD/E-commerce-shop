@@ -10,8 +10,7 @@ import {
   minPosition,
 } from '../../constants';
 import {
-  selectAllProducts,
-  // selectCategory,
+  selectAllProducts, // selectCategory,
   selectError,
   selectStatus,
 } from '../../features/ProductsSlice';

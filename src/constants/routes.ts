@@ -1,4 +1,4 @@
-import { ERoutes, TRoutes } from "../types";
+import { ERoutes, TRoutes } from '../types';
 
 export const routes: TRoutes[] = [
   { to: ERoutes.HOME, label: 'Home' },

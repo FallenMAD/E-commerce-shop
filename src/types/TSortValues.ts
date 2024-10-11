@@ -1,4 +1,4 @@
-import { ESortValues } from "./ESortValues";
+import { ESortValues } from './ESortValues';
 
 export type TSortValues = {
   value: ESortValues;

@@ -4,6 +4,7 @@ import { Product } from './Product';
 
 import { getCategories } from '../../api';
 import { useAppDispatch, useAppSelector } from '../../app/index';
+import { sortValues } from '../../constants';
 import {
   getProducts,
   selectAllProducts,
@@ -12,7 +13,6 @@ import {
   setCategory,
 } from '../../features/ProductsSlice';
 import { sortProducts } from '../../helper';
-import { sortValues } from '../../constants';
 import { TSort } from '../../types';
 
 export const ProductsList = () => {

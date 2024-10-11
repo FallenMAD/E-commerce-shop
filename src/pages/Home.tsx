@@ -4,7 +4,7 @@ import { selectError } from '../features/ProductsSlice';
 
 export const Home = () => {
   const error = useAppSelector(selectError);
-  
+
   if (error) {
     return <p>Failed to Fetch</p>;
   }

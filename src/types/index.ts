@@ -1,4 +1,4 @@
-export * from './IProduct'; 
+export * from './IProduct';
 export * from './ICart';
 export * from './TSort';
 export * from './ERoutesValue';
